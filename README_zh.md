@@ -1,7 +1,8 @@
 # 实体中文名 - Entity Chinese Name
 
-一个为 Minecraft 生物添加随机中文名的 Fabric 模组。
-
+ 一个为 Minecraft 生物添加随机中文名的 Fabric 模组。
+ 
+ ![Icon](https://raw.githubusercontent.com/juzizhen/EntityChineseName/main/src/main/resources/assets/entitychinesename/icon.png)
 
 ## 功能特点
 
@@ -29,7 +30,7 @@
 
 ## 兼容性
 
-- Minecraft 版本：1.20.1
+- Minecraft 版本：1.20.1-1.20.6
 - Mod 加载器：Fabric
 - 依赖：Fabric API、Cloth Config、ModMenu
 
@@ -44,4 +45,4 @@
 
 ---
 
-**让 Minecraft 世界充满中国风情的名字！**
+**让 Minecraft 世界的名字充满中国味！**
