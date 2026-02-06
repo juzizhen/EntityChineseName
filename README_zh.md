@@ -45,4 +45,10 @@
 
 ---
 
+## Links
+
+ - [CurseForge](https://www.curseforge.com/minecraft/mc-mods/entitychinesename)
+ - [Modrinth](https://modrinth.com/mod/entitychinesename)
+
+---
 **让 Minecraft 世界的名字充满中国味！**
