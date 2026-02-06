@@ -47,4 +47,11 @@ All configurations can be adjusted through the in-game ModMenu interface:
 
 ---
 
+## Links
+
+ - [CurseForge](https://www.curseforge.com/minecraft/mc-mods/entitychinesename)
+ - [Modrinth](https://modrinth.com/mod/entitychinesename)
+
+---
+
 **Let the Minecraft world be filled with Chinese names!**
