@@ -1,0 +1,78 @@
+{
+  "text.autoconfig.entitychinesename.title": "Entity Chinese Name Settings",
+
+  "text.autoconfig.entitychinesename.option.twoCharacterNameChance": "Two-character name chance",
+  "text.autoconfig.entitychinesename.option.twoCharacterNameChance.@Tooltip": "Chance for generating a two-character name (0-100)",
+
+  "text.autoconfig.entitychinesename.option.threeCharacterNameChance": "Three-character name chance",
+  "text.autoconfig.entitychinesename.option.threeCharacterNameChance.@Tooltip": "Chance for generating a three-character name (0-100)",
+
+  "text.autoconfig.entitychinesename.option.fourCharacterNameChance": "Four-character name chance",
+  "text.autoconfig.entitychinesename.option.fourCharacterNameChance.@Tooltip": "Chance for generating a four-character name (0-100)",
+
+  "text.autoconfig.entitychinesename.option.threeCharSingleSurnameChance": "Three-char single surname chance",
+  "text.autoconfig.entitychinesename.option.threeCharSingleSurnameChance.@Tooltip": "Chance of using single surname for three-character names (0-100)",
+
+  "text.autoconfig.entitychinesename.option.threeCharDoubleSurnameChance": "Three-char double surname chance",
+  "text.autoconfig.entitychinesename.option.threeCharDoubleSurnameChance.@Tooltip": "Chance of using double surname for three-character names (0-100)",
+
+  "text.autoconfig.entitychinesename.option.fourCharSingleSurnameChance": "Four-char single surname chance",
+  "text.autoconfig.entitychinesename.option.fourCharSingleSurnameChance.@Tooltip": "Chance of using single surname for four-character names (0-100)",
+
+  "text.autoconfig.entitychinesename.option.fourCharDoubleSurnameChance": "Four-char double surname chance",
+  "text.autoconfig.entitychinesename.option.fourCharDoubleSurnameChance.@Tooltip": "Chance of using double surname for four-character names (0-100)",
+
+  "text.autoconfig.entitychinesename.option.maleChance": "Male name chance",
+  "text.autoconfig.entitychinesename.option.maleChance.@Tooltip": "Chance for generating a male name (0-100)",
+
+  "text.autoconfig.entitychinesename.option.femaleChance": "Female name chance",
+  "text.autoconfig.entitychinesename.option.femaleChance.@Tooltip": "Chance for generating a female name (0-100)",
+
+  "text.autoconfig.entitychinesename.option.enableForPassiveMobs": "Enable for passive mobs",
+  "text.autoconfig.entitychinesename.option.enableForPassiveMobs.@Tooltip": "Whether to name passive mobs (cows, sheep, etc.)",
+
+  "text.autoconfig.entitychinesename.option.enableForHostileMobs": "Enable for hostile mobs",
+  "text.autoconfig.entitychinesename.option.enableForHostileMobs.@Tooltip": "Whether to name hostile mobs (zombies, skeletons, etc.)",
+
+  "text.autoconfig.entitychinesename.option.enableForNeutralMobs": "Enable for neutral mobs",
+  "text.autoconfig.entitychinesename.option.enableForNeutralMobs.@Tooltip": "Whether to name neutral mobs (wolves, endermen, etc.)",
+
+  "text.autoconfig.entitychinesename.option.enableForBossMobs": "Enable for boss mobs",
+  "text.autoconfig.entitychinesename.option.enableForBossMobs.@Tooltip": "Whether to name boss mobs (Ender Dragon, Wither, etc.)",
+
+  "text.autoconfig.entitychinesename.option.excludeEnderDragon": "Exclude Ender Dragon",
+  "text.autoconfig.entitychinesename.option.excludeEnderDragon.@Tooltip": "Exclude the Ender Dragon from being named (enabled by default)",
+
+  "text.autoconfig.entitychinesename.option.excludedEntities": "Excluded entities",
+  "text.autoconfig.entitychinesename.option.excludedEntities.@Tooltip": "List of entity IDs to exclude, separated by commas. Example: minecraft:creeper,minecraft:zombie",
+
+  "text.autoconfig.entitychinesename.option.surnameLists": "Surname Lists",
+  "text.autoconfig.entitychinesename.option.surnameLists.@Tooltip": "Customize the lists of surnames",
+
+  "text.autoconfig.entitychinesename.option.surnameLists.singleSurnames": "Single Surnames",
+  "text.autoconfig.entitychinesename.option.surnameLists.singleSurnames.@Tooltip": "List of single-character surnames, separated by commas",
+
+  "text.autoconfig.entitychinesename.option.surnameLists.doubleSurnames": "Double Surnames",
+  "text.autoconfig.entitychinesename.option.surnameLists.doubleSurnames.@Tooltip": "List of double-character surnames, separated by commas",
+
+  "text.autoconfig.entitychinesename.option.maleNameLists": "Male Name Lists",
+  "text.autoconfig.entitychinesename.option.maleNameLists.@Tooltip": "Customize the lists of male names",
+
+  "text.autoconfig.entitychinesename.option.maleNameLists.maleName1": "Male Name Part 1",
+  "text.autoconfig.entitychinesename.option.maleNameLists.maleName1.@Tooltip": "First part of male names, separated by commas",
+
+  "text.autoconfig.entitychinesename.option.maleNameLists.maleName2": "Male Name Part 2",
+  "text.autoconfig.entitychinesename.option.maleNameLists.maleName2.@Tooltip": "Second part of male names, separated by commas",
+
+  "text.autoconfig.entitychinesename.option.femaleNameLists": "Female Name Lists",
+  "text.autoconfig.entitychinesename.option.femaleNameLists.@Tooltip": "Customize the lists of female names",
+
+  "text.autoconfig.entitychinesename.option.femaleNameLists.femaleName1": "Female Name Part 1",
+  "text.autoconfig.entitychinesename.option.femaleNameLists.femaleName1.@Tooltip": "First part of female names, separated by commas",
+
+  "text.autoconfig.entitychinesename.option.femaleNameLists.femaleName2": "Female Name Part 2",
+  "text.autoconfig.entitychinesename.option.femaleNameLists.femaleName2.@Tooltip": "Second part of female names, separated by commas",
+
+  "entitychinesename.message.entity_named": "Entity named: %s",
+  "entitychinesename.error.empty_name_list": "Error: Name list is empty! Please check configuration."
+}

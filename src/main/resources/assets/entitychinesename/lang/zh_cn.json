@@ -1,0 +1,78 @@
+{
+  "text.autoconfig.entitychinesename.title": "实体中文名设置",
+
+  "text.autoconfig.entitychinesename.option.twoCharacterNameChance": "两字姓名概率",
+  "text.autoconfig.entitychinesename.option.twoCharacterNameChance.@Tooltip": "生成两字姓名的概率 (0-100)",
+
+  "text.autoconfig.entitychinesename.option.threeCharacterNameChance": "三字姓名概率",
+  "text.autoconfig.entitychinesename.option.threeCharacterNameChance.@Tooltip": "生成三字姓名的概率 (0-100)",
+
+  "text.autoconfig.entitychinesename.option.fourCharacterNameChance": "四字姓名概率",
+  "text.autoconfig.entitychinesename.option.fourCharacterNameChance.@Tooltip": "生成四字姓名的概率 (0-100)",
+
+  "text.autoconfig.entitychinesename.option.threeCharSingleSurnameChance": "三字名单姓概率",
+  "text.autoconfig.entitychinesename.option.threeCharSingleSurnameChance.@Tooltip": "三字姓名中使用单姓的概率 (0-100)",
+
+  "text.autoconfig.entitychinesename.option.threeCharDoubleSurnameChance": "三字名复姓概率",
+  "text.autoconfig.entitychinesename.option.threeCharDoubleSurnameChance.@Tooltip": "三字姓名中使用复姓的概率 (0-100)",
+
+  "text.autoconfig.entitychinesename.option.fourCharSingleSurnameChance": "四字名单姓概率",
+  "text.autoconfig.entitychinesename.option.fourCharSingleSurnameChance.@Tooltip": "四字姓名中使用单姓的概率 (0-100)",
+
+  "text.autoconfig.entitychinesename.option.fourCharDoubleSurnameChance": "四字名复姓概率",
+  "text.autoconfig.entitychinesename.option.fourCharDoubleSurnameChance.@Tooltip": "四字姓名中使用复姓的概率 (0-100)",
+
+  "text.autoconfig.entitychinesename.option.maleChance": "男性姓名概率",
+  "text.autoconfig.entitychinesename.option.maleChance.@Tooltip": "生成男性姓名的概率 (0-100)",
+
+  "text.autoconfig.entitychinesename.option.femaleChance": "女性姓名概率",
+  "text.autoconfig.entitychinesename.option.femaleChance.@Tooltip": "生成女性姓名的概率 (0-100)",
+
+  "text.autoconfig.entitychinesename.option.enableForPassiveMobs": "为被动生物启用",
+  "text.autoconfig.entitychinesename.option.enableForPassiveMobs.@Tooltip": "是否给被动生物命名（牛、羊等）",
+
+  "text.autoconfig.entitychinesename.option.enableForHostileMobs": "为敌对生物启用",
+  "text.autoconfig.entitychinesename.option.enableForHostileMobs.@Tooltip": "是否给敌对生物命名（僵尸、骷髅等）",
+
+  "text.autoconfig.entitychinesename.option.enableForNeutralMobs": "为中立生物启用",
+  "text.autoconfig.entitychinesename.option.enableForNeutralMobs.@Tooltip": "是否给中立生物命名（狼、末影人等）",
+
+  "text.autoconfig.entitychinesename.option.enableForBossMobs": "为BOSS生物启用",
+  "text.autoconfig.entitychinesename.option.enableForBossMobs.@Tooltip": "是否给BOSS生物命名（末影龙、凋灵等）",
+
+  "text.autoconfig.entitychinesename.option.excludeEnderDragon": "排除末影龙",
+  "text.autoconfig.entitychinesename.option.excludeEnderDragon.@Tooltip": "是否排除末影龙（默认排除）",
+
+  "text.autoconfig.entitychinesename.option.excludedEntities": "排除的实体列表",
+  "text.autoconfig.entitychinesename.option.excludedEntities.@Tooltip": "要排除的实体ID列表，用逗号分隔。例如：minecraft:creeper,minecraft:zombie",
+
+  "text.autoconfig.entitychinesename.option.surnameLists": "姓氏列表",
+  "text.autoconfig.entitychinesename.option.surnameLists.@Tooltip": "自定义姓氏列表",
+
+  "text.autoconfig.entitychinesename.option.surnameLists.singleSurnames": "单姓列表",
+  "text.autoconfig.entitychinesename.option.surnameLists.singleSurnames.@Tooltip": "单字姓氏列表，用逗号分隔",
+
+  "text.autoconfig.entitychinesename.option.surnameLists.doubleSurnames": "复姓列表",
+  "text.autoconfig.entitychinesename.option.surnameLists.doubleSurnames.@Tooltip": "复姓（两字姓）列表，用逗号分隔",
+
+  "text.autoconfig.entitychinesename.option.maleNameLists": "男性名字列表",
+  "text.autoconfig.entitychinesename.option.maleNameLists.@Tooltip": "自定义男性名字列表",
+
+  "text.autoconfig.entitychinesename.option.maleNameLists.maleName1": "男性名字1",
+  "text.autoconfig.entitychinesename.option.maleNameLists.maleName1.@Tooltip": "男性名字第一部分，用逗号分隔",
+
+  "text.autoconfig.entitychinesename.option.maleNameLists.maleName2": "男性名字2",
+  "text.autoconfig.entitychinesename.option.maleNameLists.maleName2.@Tooltip": "男性名字第二部分，用逗号分隔",
+
+  "text.autoconfig.entitychinesename.option.femaleNameLists": "女性名字列表",
+  "text.autoconfig.entitychinesename.option.femaleNameLists.@Tooltip": "自定义女性名字列表",
+
+  "text.autoconfig.entitychinesename.option.femaleNameLists.femaleName1": "女性名字1",
+  "text.autoconfig.entitychinesename.option.femaleNameLists.femaleName1.@Tooltip": "女性名字第一部分，用逗号分隔",
+
+  "text.autoconfig.entitychinesename.option.femaleNameLists.femaleName2": "女性名字2",
+  "text.autoconfig.entitychinesename.option.femaleNameLists.femaleName2.@Tooltip": "女性名字第二部分，用逗号分隔",
+
+  "entitychinesename.message.entity_named": "实体已被命名为：%s",
+  "entitychinesename.error.empty_name_list": "错误：名字列表为空！请检查配置。"
+}
