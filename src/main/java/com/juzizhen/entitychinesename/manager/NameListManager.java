@@ -10,7 +10,7 @@ import java.util.List;
 public class NameListManager {
 
     // MOD版本 - 与build.gradle中的版本保持一致
-    public static final String MOD_VERSION = "1.0.1";
+    public static final String MOD_VERSION = "1.1.0";
 
     // 默认单姓列表
     public static final List<String> DEFAULT_SINGLE_SURNAMES = Arrays.asList(
