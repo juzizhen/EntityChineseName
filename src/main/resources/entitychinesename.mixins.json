@@ -2,9 +2,11 @@
   "required": true,
   "package": "com.juzizhen.entitychinesename.mixin",
   "compatibilityLevel": "JAVA_17",
+  "plugin": "com.juzizhen.entitychinesename.mixin.EntityChineseNameMixinPlugin",
   "mixins": [
     "EnderDragonEntityMixin",
-    "MobEntityMixin"
+    "MobEntityMixinOld",
+    "MobEntityMixinNew"
   ],
   "injectors": {
     "defaultRequire": 1

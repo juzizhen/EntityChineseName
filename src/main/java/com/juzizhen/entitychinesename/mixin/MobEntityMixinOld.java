@@ -13,16 +13,21 @@ import net.minecraft.text.Text;
 import net.minecraft.world.LocalDifficulty;
 import net.minecraft.world.ServerWorldAccess;
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(MobEntity.class)
-public abstract class MobEntityMixin {
+public abstract class MobEntityMixinOld {
 
     @Inject(method = "initialize", at = @At("TAIL"))
-    private void onEntitySpawn(ServerWorldAccess world, LocalDifficulty difficulty, SpawnReason spawnReason, EntityData entityData, NbtCompound entityNbt, CallbackInfoReturnable<EntityData> cir) {
-        MobEntity mobEntity = (MobEntity) (Object) this;
+    private void onInitializeOld(ServerWorldAccess world, LocalDifficulty difficulty, SpawnReason spawnReason, EntityData entityData, NbtCompound entityNbt, CallbackInfoReturnable<EntityData> cir) {
+        handleNaming((MobEntity)(Object)this);
+    }
+
+    @Unique
+    private void handleNaming(MobEntity mobEntity) {
         var config = ConfigManager.getConfig();
 
         // 检查实体是否应该被命名
