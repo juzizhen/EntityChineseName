@@ -1,18 +1,20 @@
 package com.juzizhen.entitychinesename.generator;
 
 import com.juzizhen.entitychinesename.config.ConfigManager;
+import com.juzizhen.entitychinesename.config.ModConfig;
 import com.juzizhen.entitychinesename.manager.NameListManager;
-import net.minecraft.util.math.random.Random;
 
 import java.util.List;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class ChineseNameGenerator {
 
     /**
      * 生成随机中文名
      */
-    public static String generateRandomName(Random random) {
+    public static String generateRandomName() {
         var config = ConfigManager.getConfig();
+        var random = ThreadLocalRandom.current();
 
         // 从姓名管理器获取列表
         List<String> singleSurnames = NameListManager.getSingleSurnames();
@@ -45,7 +47,7 @@ public class ChineseNameGenerator {
     /**
      * 确定性别
      */
-    private static boolean determineGender(Random random, com.juzizhen.entitychinesename.config.ModConfig config) {
+    private static boolean determineGender(ThreadLocalRandom random, com.juzizhen.entitychinesename.config.ModConfig config) {
         int totalChance = config.maleChance + config.femaleChance;
         if (totalChance <= 0) {
             return random.nextBoolean(); // 默认各一半
@@ -58,7 +60,7 @@ public class ChineseNameGenerator {
     /**
      * 计算名字长度
      */
-    private static int calculateNameLength(Random random, com.juzizhen.entitychinesename.config.ModConfig config) {
+    private static int calculateNameLength(ThreadLocalRandom random, ModConfig config) {
         int totalChance = config.twoCharacterNameChance + config.threeCharacterNameChance + config.fourCharacterNameChance;
 
         if (totalChance <= 0) {
@@ -79,13 +81,12 @@ public class ChineseNameGenerator {
     /**
      * 生成男性姓名
      */
-    private static String generateMaleName(int length, Random random,
-                                           com.juzizhen.entitychinesename.config.ModConfig config,
+    private static String generateMaleName(int length, ThreadLocalRandom random,
+                                           ModConfig config,
                                            List<String> singleSurnames, List<String> doubleSurnames,
                                            List<String> maleName1, List<String> maleName2) {
 
         return switch (length) {
-            case 2 -> generateTwoCharacterMaleName(random, singleSurnames, maleName1, maleName2);
             case 3 ->
                     generateThreeCharacterMaleName(random, config, singleSurnames, doubleSurnames, maleName1, maleName2);
             case 4 -> generateFourCharacterMaleName(random, doubleSurnames, maleName1, maleName2);
@@ -96,13 +97,12 @@ public class ChineseNameGenerator {
     /**
      * 生成女性姓名
      */
-    private static String generateFemaleName(int length, Random random,
-                                             com.juzizhen.entitychinesename.config.ModConfig config,
+    private static String generateFemaleName(int length, ThreadLocalRandom random,
+                                             ModConfig config,
                                              List<String> singleSurnames, List<String> doubleSurnames,
                                              List<String> femaleName1, List<String> femaleName2) {
 
         return switch (length) {
-            case 2 -> generateTwoCharacterFemaleName(random, singleSurnames, femaleName1, femaleName2);
             case 3 ->
                     generateThreeCharacterFemaleName(random, config, singleSurnames, doubleSurnames, femaleName1, femaleName2);
             case 4 -> generateFourCharacterFemaleName(random, doubleSurnames, femaleName1, femaleName2);
@@ -113,7 +113,7 @@ public class ChineseNameGenerator {
     /**
      * 生成两字男性姓名：单姓 + 男名1/男名2（概率各一半）
      */
-    private static String generateTwoCharacterMaleName(Random random,
+    private static String generateTwoCharacterMaleName(ThreadLocalRandom random,
                                                        List<String> singleSurnames, List<String> maleName1, List<String> maleName2) {
 
         String surname = getRandomElement(singleSurnames, random);
@@ -131,7 +131,7 @@ public class ChineseNameGenerator {
     /**
      * 生成三字男性姓名
      */
-    private static String generateThreeCharacterMaleName(Random random,
+    private static String generateThreeCharacterMaleName(ThreadLocalRandom random,
                                                          com.juzizhen.entitychinesename.config.ModConfig config,
                                                          List<String> singleSurnames, List<String> doubleSurnames,
                                                          List<String> maleName1, List<String> maleName2) {
@@ -167,7 +167,7 @@ public class ChineseNameGenerator {
     /**
      * 生成四字男性姓名：复姓 + 男名1 + 男名2
      */
-    private static String generateFourCharacterMaleName(Random random,
+    private static String generateFourCharacterMaleName(ThreadLocalRandom random,
                                                         List<String> doubleSurnames, List<String> maleName1, List<String> maleName2) {
 
         if (doubleSurnames.isEmpty()) {
@@ -184,7 +184,7 @@ public class ChineseNameGenerator {
     /**
      * 生成两字女性姓名：单姓 + 女名1/女名2（概率各一半）
      */
-    private static String generateTwoCharacterFemaleName(Random random,
+    private static String generateTwoCharacterFemaleName(ThreadLocalRandom random,
                                                          List<String> singleSurnames, List<String> femaleName1, List<String> femaleName2) {
 
         String surname = getRandomElement(singleSurnames, random);
@@ -202,7 +202,7 @@ public class ChineseNameGenerator {
     /**
      * 生成三字女性姓名
      */
-    private static String generateThreeCharacterFemaleName(Random random,
+    private static String generateThreeCharacterFemaleName(ThreadLocalRandom random,
                                                            com.juzizhen.entitychinesename.config.ModConfig config,
                                                            List<String> singleSurnames, List<String> doubleSurnames,
                                                            List<String> femaleName1, List<String> femaleName2) {
@@ -238,7 +238,7 @@ public class ChineseNameGenerator {
     /**
      * 生成四字女性姓名：复姓 + 女名1 + 女名2
      */
-    private static String generateFourCharacterFemaleName(Random random,
+    private static String generateFourCharacterFemaleName(ThreadLocalRandom random,
                                                           List<String> doubleSurnames, List<String> femaleName1, List<String> femaleName2) {
 
         if (doubleSurnames.isEmpty()) {
@@ -255,7 +255,7 @@ public class ChineseNameGenerator {
     /**
      * 从列表中随机获取一个元素
      */
-    private static String getRandomElement(List<String> list, Random random) {
+    private static String getRandomElement(List<String> list, ThreadLocalRandom random) {
         if (list.isEmpty()) {
             throw new IllegalArgumentException("列表不能为空！");
         }

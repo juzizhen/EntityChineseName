@@ -22,11 +22,11 @@ public class ModConfig implements ConfigData {
 
     @ConfigEntry.Gui.Tooltip
     @ConfigEntry.BoundedDiscrete(min = 0, max = 100)
-    public int threeCharacterNameChance = 50;
+    public int threeCharacterNameChance = 60;
 
     @ConfigEntry.Gui.Tooltip
     @ConfigEntry.BoundedDiscrete(min = 0, max = 100)
-    public int fourCharacterNameChance = 20;
+    public int fourCharacterNameChance = 10;
 
     // 姓氏类型概率
     @ConfigEntry.Gui.Tooltip
@@ -62,17 +62,7 @@ public class ModConfig implements ConfigData {
     public boolean enableForHostileMobs = true;
 
     @ConfigEntry.Gui.Tooltip
-    public boolean enableForNeutralMobs = true;
-
-    @ConfigEntry.Gui.Tooltip
-    public boolean enableForBossMobs = false;
-
-    @ConfigEntry.Gui.Tooltip
-    public boolean excludeEnderDragon = true;
-
-    @ConfigEntry.Gui.Tooltip
-    @ConfigEntry.Gui.Excluded
-    public String excludedEntities = "minecraft:ender_dragon";
+    public List<String> excludedEntityLists = NameListManager.DEFAULT_EXCLUDED;
 
     // 姓氏配置
     @CollapsibleObject

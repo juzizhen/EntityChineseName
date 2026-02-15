@@ -37,14 +37,8 @@
   "text.autoconfig.entitychinesename.option.enableForNeutralMobs": "Enable for neutral mobs",
   "text.autoconfig.entitychinesename.option.enableForNeutralMobs.@Tooltip": "Whether to name neutral mobs (wolves, endermen, etc.)",
 
-  "text.autoconfig.entitychinesename.option.enableForBossMobs": "Enable for boss mobs",
-  "text.autoconfig.entitychinesename.option.enableForBossMobs.@Tooltip": "Whether to name boss mobs (Ender Dragon, Wither, etc.)",
-
-  "text.autoconfig.entitychinesename.option.excludeEnderDragon": "Exclude Ender Dragon",
-  "text.autoconfig.entitychinesename.option.excludeEnderDragon.@Tooltip": "Exclude the Ender Dragon from being named (enabled by default)",
-
-  "text.autoconfig.entitychinesename.option.excludedEntities": "Excluded entities",
-  "text.autoconfig.entitychinesename.option.excludedEntities.@Tooltip": "List of entity IDs to exclude, separated by commas. Example: minecraft:creeper,minecraft:zombie",
+  "text.autoconfig.entitychinesename.option.excludedEntityLists": "Excluded entities",
+  "text.autoconfig.entitychinesename.option.excludedEntityLists.@Tooltip": "List of entity IDs to exclude, separated by commas. Example: minecraft:creeper,minecraft:zombie",
 
   "text.autoconfig.entitychinesename.option.surnameLists": "Surname Lists",
   "text.autoconfig.entitychinesename.option.surnameLists.@Tooltip": "Customize the lists of surnames",

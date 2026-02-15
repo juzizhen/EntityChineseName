@@ -10,7 +10,7 @@ import java.util.List;
 public class NameListManager {
 
     // MOD版本 - 与build.gradle中的版本保持一致
-    public static final String MOD_VERSION = "1.1.0";
+    public static final String MOD_VERSION = "1.2.0";
 
     // 默认单姓列表
     public static final List<String> DEFAULT_SINGLE_SURNAMES = Arrays.asList(
@@ -89,6 +89,10 @@ public class NameListManager {
             "淑", "婷", "婉", "薇", "雯", "娴", "馨", "秀", "雅", "燕",
             "妍", "嫣", "艺", "英", "莹", "咏", "玉", "园", "韵", "臻",
             "芝", "珠"
+    );
+
+    public static final List<String> DEFAULT_EXCLUDED = Arrays.asList(
+            "minecraft:ender_dragon", "minecraft:wither"
     );
 
     // 缓存的姓名列表
@@ -184,8 +188,8 @@ public class NameListManager {
 
         // 重置所有概率设置
         config.twoCharacterNameChance = 30;
-        config.threeCharacterNameChance = 50;
-        config.fourCharacterNameChance = 20;
+        config.threeCharacterNameChance = 60;
+        config.fourCharacterNameChance = 10;
         config.threeCharSingleSurnameChance = 50;
         config.threeCharDoubleSurnameChance = 50;
         config.fourCharSingleSurnameChance = 30;
@@ -198,10 +202,7 @@ public class NameListManager {
         // 重置实体类型设置
         config.enableForPassiveMobs = true;
         config.enableForHostileMobs = true;
-        config.enableForNeutralMobs = true;
-        config.enableForBossMobs = false;
-        config.excludeEnderDragon = true;
-        config.excludedEntities = "minecraft:ender_dragon";
+        config.excludedEntityLists = getDefaultexcludedListsString();
 
         // 重置姓名列表
         config.surnameLists.singleSurnames = getDefaultSingleSurnamesString();
@@ -426,6 +427,13 @@ public class NameListManager {
     }
 
     /**
+     * 获取默认排除列表字符串（逗号分隔）
+     */
+    public static List<String> getDefaultexcludedListsString() {
+        return DEFAULT_EXCLUDED;
+    }
+
+    /**
      * 获取MOD版本
      */
     public static String getModVersion() {
@@ -440,30 +448,6 @@ public class NameListManager {
             return ConfigManager.getConfig().configVersion;
         } catch (Exception e) {
             return "unknown";
-        }
-    }
-
-    /**
-     * 重置整个配置到默认值（用于ModMenu中的重置按钮）
-     */
-    public static void resetFullConfig() {
-        try {
-            var configHolder = ConfigManager.getConfigHolder();
-            var config = configHolder.getConfig();
-
-            // 执行完整配置重置
-            migrateFullConfig(config);
-
-            // 保存配置
-            configHolder.save();
-
-            // 刷新缓存
-            refreshCache();
-
-            EntityChineseName.LOGGER.info("已通过重置按钮重置所有配置");
-
-        } catch (Exception e) {
-            EntityChineseName.LOGGER.error("重置配置时出错", e);
         }
     }
 }

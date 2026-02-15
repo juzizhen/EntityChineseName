@@ -37,14 +37,8 @@
   "text.autoconfig.entitychinesename.option.enableForNeutralMobs": "为中立生物启用",
   "text.autoconfig.entitychinesename.option.enableForNeutralMobs.@Tooltip": "是否给中立生物命名（狼、末影人等）",
 
-  "text.autoconfig.entitychinesename.option.enableForBossMobs": "为BOSS生物启用",
-  "text.autoconfig.entitychinesename.option.enableForBossMobs.@Tooltip": "是否给BOSS生物命名（末影龙、凋灵等）",
-
-  "text.autoconfig.entitychinesename.option.excludeEnderDragon": "排除末影龙",
-  "text.autoconfig.entitychinesename.option.excludeEnderDragon.@Tooltip": "是否排除末影龙（默认排除）",
-
-  "text.autoconfig.entitychinesename.option.excludedEntities": "排除的实体列表",
-  "text.autoconfig.entitychinesename.option.excludedEntities.@Tooltip": "要排除的实体ID列表，用逗号分隔。例如：minecraft:creeper,minecraft:zombie",
+  "text.autoconfig.entitychinesename.option.excludedEntityLists": "排除的实体列表",
+  "text.autoconfig.entitychinesename.option.excludedEntityLists.@Tooltip": "要排除的实体ID列表，用逗号分隔。例如：minecraft:creeper,minecraft:zombie",
 
   "text.autoconfig.entitychinesename.option.surnameLists": "姓氏列表",
   "text.autoconfig.entitychinesename.option.surnameLists.@Tooltip": "自定义姓氏列表",
