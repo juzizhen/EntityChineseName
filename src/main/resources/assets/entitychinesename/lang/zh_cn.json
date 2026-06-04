@@ -67,6 +67,15 @@
   "text.autoconfig.entitychinesename.option.femaleNameLists.femaleName2": "女性名字2",
   "text.autoconfig.entitychinesename.option.femaleNameLists.femaleName2.@Tooltip": "女性名字第二部分，用逗号分隔",
 
+  "text.autoconfig.entitychinesename.option.customNameLists": "自定义姓名列表",
+  "text.autoconfig.entitychinesename.option.customNameLists.@Tooltip": "自定义姓名列表",
+
+  "text.autoconfig.entitychinesename.option.customNameLists.customNameChance": "自定义姓名概率",
+  "text.autoconfig.entitychinesename.option.customNameLists.customNameChance.@Tooltip": "生成自定义姓名的概率 (0-100))",
+
+  "text.autoconfig.entitychinesename.option.customNameLists.customName": "自定义姓名",
+  "text.autoconfig.entitychinesename.option.customNameLists.customName.@Tooltip": "添加自定义姓名，用逗号分隔",
+
   "entitychinesename.message.entity_named": "实体已被命名为：%s",
   "entitychinesename.error.empty_name_list": "错误：名字列表为空！请检查配置。"
 }

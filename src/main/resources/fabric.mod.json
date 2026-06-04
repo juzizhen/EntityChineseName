@@ -20,9 +20,6 @@
 		],
 		"modmenu": [
 			"com.juzizhen.entitychinesename.config.ConfigScreen"
-		],
-		"fabric-datagen": [
-			"com.juzizhen.entitychinesename.EntityChineseNameDataGenerator"
 		]
 	},
 	"mixins": [

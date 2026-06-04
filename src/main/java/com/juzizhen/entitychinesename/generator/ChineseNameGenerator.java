@@ -16,6 +16,14 @@ public class ChineseNameGenerator {
         var config = ConfigManager.getConfig();
         var random = ThreadLocalRandom.current();
 
+        if (!config.customNameLists.customName.isEmpty() && config.customNameLists.customNameChance != 0){
+            List<String> customName = NameListManager.parseCommaSeparatedList(config.customNameLists.customName);
+            String name = determineCustomName(random, config, customName);
+            if (!name.isEmpty()) {
+                return name;
+            }
+        }
+
         // 从姓名管理器获取列表
         List<String> singleSurnames = NameListManager.getSingleSurnames();
         List<String> doubleSurnames = NameListManager.getDoubleSurnames();
@@ -45,9 +53,22 @@ public class ChineseNameGenerator {
     }
 
     /**
+     * 确定自定义姓名
+     */
+    private static String determineCustomName(ThreadLocalRandom random, ModConfig config, List<String> customName) {
+        int customChance = config.customNameLists.customNameChance;
+        int randomValue = random.nextInt(100);
+        if (randomValue < customChance) {
+            return getRandomElement(customName, random);
+        } else {
+            return "";
+        }
+    }
+
+    /**
      * 确定性别
      */
-    private static boolean determineGender(ThreadLocalRandom random, com.juzizhen.entitychinesename.config.ModConfig config) {
+    private static boolean determineGender(ThreadLocalRandom random, ModConfig config) {
         int totalChance = config.maleChance + config.femaleChance;
         if (totalChance <= 0) {
             return random.nextBoolean(); // 默认各一半
@@ -132,7 +153,7 @@ public class ChineseNameGenerator {
      * 生成三字男性姓名
      */
     private static String generateThreeCharacterMaleName(ThreadLocalRandom random,
-                                                         com.juzizhen.entitychinesename.config.ModConfig config,
+                                                         ModConfig config,
                                                          List<String> singleSurnames, List<String> doubleSurnames,
                                                          List<String> maleName1, List<String> maleName2) {
 
@@ -203,7 +224,7 @@ public class ChineseNameGenerator {
      * 生成三字女性姓名
      */
     private static String generateThreeCharacterFemaleName(ThreadLocalRandom random,
-                                                           com.juzizhen.entitychinesename.config.ModConfig config,
+                                                           ModConfig config,
                                                            List<String> singleSurnames, List<String> doubleSurnames,
                                                            List<String> femaleName1, List<String> femaleName2) {
 

@@ -67,6 +67,15 @@
   "text.autoconfig.entitychinesename.option.femaleNameLists.femaleName2": "Female Name Part 2",
   "text.autoconfig.entitychinesename.option.femaleNameLists.femaleName2.@Tooltip": "Second part of female names, separated by commas",
 
+  "text.autoconfig.entitychinesename.option.customNameLists": "Custom Name Lists",
+  "text.autoconfig.entitychinesename.option.customNameLists.@Tooltip": "Custom Name List",
+
+  "text.autoconfig.entitychinesename.option.customNameLists.customNameChance": "Custom name chance",
+  "text.autoconfig.entitychinesename.option.customNameLists.customNameChance.@Tooltip": "Chance for generating a custom name (0-100)",
+
+  "text.autoconfig.entitychinesename.option.customNameLists.customName": "Custom Name",
+  "text.autoconfig.entitychinesename.option.customNameLists.customName.@Tooltip": "Add your custom name, separated by commas",
+
   "entitychinesename.message.entity_named": "Entity named: %s",
   "entitychinesename.error.empty_name_list": "Error: Name list is empty! Please check configuration."
 }

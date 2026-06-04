@@ -18,32 +18,32 @@ public class ModConfig implements ConfigData {
     // 名字长度概率
     @ConfigEntry.Gui.Tooltip
     @ConfigEntry.BoundedDiscrete(min = 0, max = 100)
-    public int twoCharacterNameChance = 30;
+    public int twoCharacterNameChance = 20;
 
     @ConfigEntry.Gui.Tooltip
     @ConfigEntry.BoundedDiscrete(min = 0, max = 100)
-    public int threeCharacterNameChance = 60;
+    public int threeCharacterNameChance = 75;
 
     @ConfigEntry.Gui.Tooltip
     @ConfigEntry.BoundedDiscrete(min = 0, max = 100)
-    public int fourCharacterNameChance = 10;
+    public int fourCharacterNameChance = 5;
 
     // 姓氏类型概率
     @ConfigEntry.Gui.Tooltip
     @ConfigEntry.BoundedDiscrete(min = 0, max = 100)
-    public int threeCharSingleSurnameChance = 50;
+    public int threeCharSingleSurnameChance = 95;
 
     @ConfigEntry.Gui.Tooltip
     @ConfigEntry.BoundedDiscrete(min = 0, max = 100)
-    public int threeCharDoubleSurnameChance = 50;
+    public int threeCharDoubleSurnameChance = 5;
 
     @ConfigEntry.Gui.Tooltip
     @ConfigEntry.BoundedDiscrete(min = 0, max = 100)
-    public int fourCharSingleSurnameChance = 30;
+    public int fourCharSingleSurnameChance = 40;
 
     @ConfigEntry.Gui.Tooltip
     @ConfigEntry.BoundedDiscrete(min = 0, max = 100)
-    public int fourCharDoubleSurnameChance = 70;
+    public int fourCharDoubleSurnameChance = 60;
 
     // 性别概率
     @ConfigEntry.Gui.Tooltip
@@ -62,7 +62,7 @@ public class ModConfig implements ConfigData {
     public boolean enableForHostileMobs = true;
 
     @ConfigEntry.Gui.Tooltip
-    public List<String> excludedEntityLists = NameListManager.DEFAULT_EXCLUDED;
+    public List<String> excludedEntityLists = NameListManager.getDefaultexcludedListsString();
 
     // 姓氏配置
     @CollapsibleObject
@@ -70,10 +70,10 @@ public class ModConfig implements ConfigData {
 
     public static class SurnameLists {
         @ConfigEntry.Gui.Tooltip
-        public String singleSurnames = String.join(",", NameListManager.DEFAULT_SINGLE_SURNAMES);
+        public String singleSurnames = "";
 
         @ConfigEntry.Gui.Tooltip
-        public String doubleSurnames = String.join(",", NameListManager.DEFAULT_DOUBLE_SURNAMES);
+        public String doubleSurnames = "";
     }
 
     // 男性名字配置
@@ -82,10 +82,10 @@ public class ModConfig implements ConfigData {
 
     public static class MaleNameLists {
         @ConfigEntry.Gui.Tooltip
-        public String maleName1 = String.join(",", NameListManager.DEFAULT_MALE_NAME1);
+        public String maleName1 = "";
 
         @ConfigEntry.Gui.Tooltip
-        public String maleName2 = String.join(",", NameListManager.DEFAULT_MALE_NAME2);
+        public String maleName2 = "";
     }
 
     // 女性名字配置
@@ -94,9 +94,22 @@ public class ModConfig implements ConfigData {
 
     public static class FemaleNameLists {
         @ConfigEntry.Gui.Tooltip
-        public String femaleName1 = String.join(",", NameListManager.DEFAULT_FEMALE_NAME1);
+        public String femaleName1 = "";
 
         @ConfigEntry.Gui.Tooltip
-        public String femaleName2 = String.join(",", NameListManager.DEFAULT_FEMALE_NAME2);
+        public String femaleName2 = "";
+    }
+
+    // 自定义姓名配置
+    @CollapsibleObject
+    public CustomNameLists customNameLists = new CustomNameLists();
+
+    public static class CustomNameLists {
+        @ConfigEntry.Gui.Tooltip
+        @ConfigEntry.BoundedDiscrete(min = 0, max = 100)
+        public int customNameChance = 5;
+
+        @ConfigEntry.Gui.Tooltip
+        public String customName = "";
     }
 }
