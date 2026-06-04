@@ -8,8 +8,8 @@
 		"juzizhen"
 	],
 	"contact": {
-		"homepage": "",
-		"sources": ""
+		"homepage": "https://github.com/juzizhen/EntityChineseName",
+		"sources": "https://github.com/juzizhen/EntityChineseName"
 	},
 	"license": "GPL-3.0",
 	"icon": "assets/entitychinesename/icon.png",
