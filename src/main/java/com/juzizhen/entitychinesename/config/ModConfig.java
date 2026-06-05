@@ -70,10 +70,10 @@ public class ModConfig implements ConfigData {
 
     public static class SurnameLists {
         @ConfigEntry.Gui.Tooltip
-        public String singleSurnames = "";
+        public String singleSurnames = NameListManager.getDefaultSingleSurnamesString();
 
         @ConfigEntry.Gui.Tooltip
-        public String doubleSurnames = "";
+        public String doubleSurnames = NameListManager.getDefaultDoubleSurnamesString();
     }
 
     // 男性名字配置
@@ -82,10 +82,10 @@ public class ModConfig implements ConfigData {
 
     public static class MaleNameLists {
         @ConfigEntry.Gui.Tooltip
-        public String maleName1 = "";
+        public String maleName1 = NameListManager.getDefaultMaleName1String();
 
         @ConfigEntry.Gui.Tooltip
-        public String maleName2 = "";
+        public String maleName2 = NameListManager.getDefaultMaleName2String();
     }
 
     // 女性名字配置
@@ -94,10 +94,10 @@ public class ModConfig implements ConfigData {
 
     public static class FemaleNameLists {
         @ConfigEntry.Gui.Tooltip
-        public String femaleName1 = "";
+        public String femaleName1 = NameListManager.getDefaultFemaleName1String();
 
         @ConfigEntry.Gui.Tooltip
-        public String femaleName2 = "";
+        public String femaleName2 = NameListManager.getDefaultFemaleName2String();
     }
 
     // 自定义姓名配置
