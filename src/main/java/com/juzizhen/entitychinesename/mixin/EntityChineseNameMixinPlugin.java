@@ -17,7 +17,8 @@ public class EntityChineseNameMixinPlugin implements IMixinConfigPlugin {
         // 获取当前 Minecraft 版本
         mcVersion = FabricLoader.getInstance()
                 .getModContainer("minecraft")
-                .get().getMetadata().getVersion().getFriendlyString();
+                .map(c -> c.getMetadata().getVersion().getFriendlyString())
+                .orElse("unknown");
     }
 
     @Override
@@ -29,11 +30,11 @@ public class EntityChineseNameMixinPlugin implements IMixinConfigPlugin {
     public boolean shouldApplyMixin(String targetClassName, String mixinClassName) {
         // 根据版本号选择性加载 Mixin
         if (mixinClassName.endsWith("MobEntityMixinOld")) {
-            // 在 1.20.1 到 1.20.5 使用旧版 Mixin
-            return mcVersion.startsWith("1.20.1") || mcVersion.startsWith("1.20.2") || mcVersion.startsWith("1.20.3") || mcVersion.startsWith("1.20.4") || mcVersion.startsWith("1.20.5");
+            // 在 1.20.1 到 1.20.4 使用旧版 Mixin
+            return mcVersion.startsWith("1.20.1") || mcVersion.startsWith("1.20.2") || mcVersion.startsWith("1.20.3") || mcVersion.startsWith("1.20.4");
         } else if (mixinClassName.endsWith("MobEntityMixinNew")) {
-            // 在 1.20.6 使用新版 Mixin
-            return mcVersion.compareTo("1.20.6") >= 0;
+            // 在 1.20.5 到 1.20.6 使用新版 Mixin
+            return mcVersion.startsWith("1.20.5") || mcVersion.startsWith("1.20.6");
         }
         return true;
     }
@@ -48,12 +49,8 @@ public class EntityChineseNameMixinPlugin implements IMixinConfigPlugin {
     }
 
     @Override
-    public void preApply(String s, ClassNode classNode, String s1, IMixinInfo iMixinInfo) {
-
-    }
+    public void preApply(String s, ClassNode classNode, String s1, IMixinInfo iMixinInfo) {}
 
     @Override
-    public void postApply(String s, ClassNode classNode, String s1, IMixinInfo iMixinInfo) {
-
-    }
+    public void postApply(String s, ClassNode classNode, String s1, IMixinInfo iMixinInfo) {}
 }
