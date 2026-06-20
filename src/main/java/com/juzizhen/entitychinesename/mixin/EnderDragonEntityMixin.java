@@ -18,7 +18,7 @@ public abstract class EnderDragonEntityMixin {
 
     @Inject(method = "<init>(Lnet/minecraft/entity/EntityType;Lnet/minecraft/world/World;)V", at = @At("TAIL"))
     private void onEntitySpawn(EntityType<?> entityType, World world, CallbackInfo ci) {
-        if (!world.isClient) {
+        if (!world.isClient()) {
             MobEntity mobEntity = (MobEntity) (Object) this;
             var config = ConfigManager.getConfig();
 
@@ -42,4 +42,3 @@ public abstract class EnderDragonEntityMixin {
         }
     }
 }
-

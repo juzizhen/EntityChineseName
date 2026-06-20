@@ -5,8 +5,8 @@
   "plugin": "com.juzizhen.entitychinesename.mixin.EntityChineseNameMixinPlugin",
   "mixins": [
     "EnderDragonEntityMixin",
-    "MobEntityMixinOld",
-    "MobEntityMixinNew"
+    "MobEntityMixinNew",
+    "MobEntityMixinOld"
   ],
   "injectors": {
     "defaultRequire": 1

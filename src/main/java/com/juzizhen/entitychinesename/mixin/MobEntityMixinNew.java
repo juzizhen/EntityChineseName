@@ -4,11 +4,9 @@ import com.juzizhen.entitychinesename.config.ConfigManager;
 import com.juzizhen.entitychinesename.generator.ChineseNameGenerator;
 import com.juzizhen.entitychinesename.util.EntityFilter;
 import net.minecraft.entity.EntityData;
-import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnReason;
 import net.minecraft.entity.boss.dragon.EnderDragonEntity;
 import net.minecraft.entity.mob.MobEntity;
-import net.minecraft.nbt.NbtCompound;
 import net.minecraft.text.Text;
 import net.minecraft.world.LocalDifficulty;
 import net.minecraft.world.ServerWorldAccess;
@@ -40,10 +38,6 @@ public abstract class MobEntityMixinNew {
                 if (!(mobEntity instanceof EnderDragonEntity)) {
                     mobEntity.setCustomName(Text.literal(chineseName));
                 }
-
-                // 可选：记录日志
-                com.juzizhen.entitychinesename.EntityChineseName.LOGGER.debug("实体 {} 被命名为: {}",
-                        EntityType.getId(mobEntity.getType()), chineseName);
             }
         }
     }
